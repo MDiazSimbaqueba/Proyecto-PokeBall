@@ -1,0 +1,70 @@
+/* #pokemon-grid {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 0.5rem;
+} */
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&family=Tektur:wght@400;500&display=swap');
+
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	font-family:'Tektur', cursive;
+	background-color: rgba(137, 43, 226, 0.301) ;
+}
+
+.container-img{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.img-title-pokemon{
+	margin: auto;
+	padding: 15px;
+	width: 250px;
+}
+
+.img-poke-ball{
+	margin: auto;
+	padding: 90px;
+	width: 250px;
+}
+
+.img-poke-ball:hover{
+	cursor: pointer;
+}
+
+.input-search{
+	/* text-align: center; */
+	background-color: rgba(137, 43, 226, 0.178);
+	display: flex;
+	margin: auto;
+	position: relative;
+	top: 175px;
+	padding: 5px;
+	width: 200px;
+	height: 20px;
+	border-radius: 10px;
+	border-style: none;
+	outline: 0px;
+}
+
+.input-search::placeholder{
+	font-family: 'Tektur', cursive;
+	color: rgba(0, 0, 0, 0.623);
+	text-align: center;
+}
+
+.pokemon-card {
+	width: 200px;
+	aspect-ratio: 1;
+}
+
+.pokemon-card > img {
+	display: block;
+	width: 100%;
+}
