@@ -1,13 +1,14 @@
-/* #pokemon-grid {
-	display: grid;
-	grid-template-columns: repeat(4, 1fr);
-	gap: 0.5rem;
-} */
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&family=Tektur:wght@400;500&display=swap');
 
 *{
 	margin: 0;
 	padding: 0;
+}
+
+#pokemon-grid {
+	display: grid;
+	grid-template-columns: repeat(1fr);
+	gap: 0.5rem;
 }
 
 body{
