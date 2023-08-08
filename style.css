@@ -19,12 +19,12 @@ body{
 
 .container-img{
 	display: grid;
-	/* grid-template-columns: repeat(1fr); */
 	gap: 0.5rem;
 	justify-items: center;
 	justify-content: center;
-	/* align-items: center;
-	flex-direction: column; */
+	/* position: absolute;
+	top: 5%;
+	left: 34%; */
 }
 
 .img-title-pokemon{
@@ -34,6 +34,7 @@ body{
 }
 
 .img-poke-ball{
+	background-color: rgb(217, 193, 240);
 	margin: auto;
 	padding: 90px;
 	width: 250px;
@@ -44,12 +45,12 @@ body{
 }
 
 .input-search{
-	/* text-align: center; */
 	background-color: rgba(137, 43, 226, 0.178);
-	display: flex;
 	margin: auto;
-	position: relative;
-	top: 175px;
+	/* display: flex; */
+	position: absolute;
+	top: 25%;
+	left: 30;
 	padding: 5px;
 	width: 200px;
 	height: 20px;
@@ -72,21 +73,26 @@ body{
 	height: 300px;
 	aspect-ratio: 1;
 	border-radius: 10px;
-	margin: 5px;;
+	margin: auto;
+	/* position: absolute; */
+	/* top: 230px;
+	left: 120px; */
 	position: absolute;
-	top: 230px;
-	left: 120px;
+	top: 33%;
+	left: 40.8%;
 	z-index: -1;
 }
 
 .pokemon-card h2{
+	text-transform: capitalize;
 	text-align: center;
 	padding: 10px;
 }
 
 .pokemon-card h3{
+	text-align: center;
 	color: rgb(177, 198, 236);
-	padding: 10px;
+	padding: 4px 10px;
 }
 
 .pokemon-card > img {

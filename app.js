@@ -1,6 +1,5 @@
 const imgChange = document.querySelector('#img-change');
 const searchInput = document.querySelector('#search-pokemon');
-
 const pokemonsGlobal = [];
 const pokemonGrid = document.querySelector('#pokemon-grid');
 
@@ -11,21 +10,22 @@ const cleanView = () => {
 
 searchInput.addEventListener('keyup', () => {
     imgChange.onclick = function(){
+    imgChange.style.zIndex = "-1";
     imgChange.src = "./assets/pokebolaabierta.png";
     imgChange.style.width = "390px";
     imgChange.style.padding = "60px";
     imgChange.style.margin = "0 0 0 750px";
+
     //Recargar página
     setTimeout(()=>{
         location.reload();
     }, "10000");
-    getPokemons();
     }
 
     const inputValue = searchInput.value;
-    console.log(inputValue);
+    // console.log(inputValue);
     let pokemonsGlobal2 = searchByName(inputValue);
-    console.log(pokemonsGlobal2);
+    // console.log(pokemonsGlobal2);
     cleanView();
     renderPokemonCard(pokemonsGlobal2);
 });
@@ -65,6 +65,9 @@ const normalizePokemons = (responseJson, pokemon) => {
         const pokemonObject = {
             name: pokemon.name,
             img: img,
+            stroke: responseJson.stats[1].base_stat,
+            special: responseJson.stats[3].base_stat,
+            defense: responseJson.stats[2].base_stat
         };
         pokemonsGlobal.push(pokemonObject);
 }
@@ -78,8 +81,10 @@ const renderPokemonCard = (array) => {
         <img
             src="${array[i].img}"
         />
-        <h3>Potencia: ${array[i].potency}</h3>`;
+        <h3>Ataque: ${array[i].stroke}</h3>
+        <h3>Especial: ${array[i].special}</h3>
+        <h3>Defensa: ${array[i].defense}</h3>`;
         pokemonGrid.appendChild(pokemonCard);
     }
 }
-// getPokemons();
+getPokemons();
