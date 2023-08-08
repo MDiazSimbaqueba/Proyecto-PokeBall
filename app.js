@@ -18,8 +18,10 @@ searchInput.addEventListener('keyup', () => {
     //Recargar página
     setTimeout(()=>{
         location.reload();
-    }, "8000");
+    }, "10000");
+    getPokemons();
     }
+
     const inputValue = searchInput.value;
     console.log(inputValue);
     let pokemonsGlobal2 = searchByName(inputValue);
@@ -80,4 +82,4 @@ const renderPokemonCard = (array) => {
         pokemonGrid.appendChild(pokemonCard);
     }
 }
-getPokemons();
+// getPokemons();
